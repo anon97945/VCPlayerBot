@@ -51,7 +51,7 @@ async def search(client, query):
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
-        await query.answer(results=answers, cache_time=0)
+        #await query.answer(results=answers, cache_time=0)
         return
     string = query.query.lower().strip().rstrip()
     if string == "":
