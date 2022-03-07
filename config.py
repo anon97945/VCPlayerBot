@@ -159,8 +159,8 @@ class Config:
        except:
           LOGGER.error("Invalid FPS specified")
           E_FPS=False
-       if not FPS >= 30:
-          FPS=30
+       if not FPS >= 20:
+          FPS=20
     else:
        FPS=30
     try:
