@@ -77,6 +77,7 @@ class Config:
     #Quality vars
     E_BITRATE=os.environ.get("BITRATE", False)
     E_FPS=os.environ.get("FPS", False)
+    E_CACHE=os.environ.get("CACHE", False)
     CUSTOM_QUALITY=os.environ.get("QUALITY", "100")
 
     #Search filters for cplay
@@ -152,6 +153,19 @@ class Config:
           BITRATE=48000
     else:
        BITRATE=48000
+
+    if E_CACHE:
+       try:
+          CACHE=int(E_CACHE)
+       except:
+          LOGGER.error("Invalid cache specified.")
+          E_CACHE=False
+          CACHE=300
+       if CACHE >= 300:
+          CACHE=300
+    else:
+       CACHE=180
+
     
     if E_FPS:
        try:
@@ -442,5 +456,7 @@ For more info on channel play , read help from player section.__
 17. `BITRATE` : __Bitrate of audio (Not recommended to change).__
 
 18. `FPS` : __Fps of video to be played (Not recommended to change.)__
+
+19. `CACHE` : __Cache in seconds (Not recommended to change.)__
 
 """
