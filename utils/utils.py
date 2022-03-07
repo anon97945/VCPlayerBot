@@ -452,7 +452,7 @@ async def join_and_play(link, seek, pic, width, height):
                                 Config.BITRATE
                             ),
                         ),
-                        stream_type=StreamType().live_stream,
+                        stream_type=StreamType().pulse_stream,
                     )
         LOGGER.info(Config.FPS)
         LOGGER.info(Config.BITRATE)
