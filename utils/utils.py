@@ -452,7 +452,7 @@ async def join_and_play(link, seek, pic, width, height):
                                 Config.BITRATE
                             ),
                         ),
-                        stream_type=StreamType().pulse_stream,
+                        stream_type=StreamType().live_stream,
                     )
         Config.CALL_STATUS=True
         return True
