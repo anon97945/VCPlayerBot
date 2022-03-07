@@ -454,8 +454,6 @@ async def join_and_play(link, seek, pic, width, height):
                         ),
                         stream_type=StreamType().live_stream,
                     )
-        LOGGER.info(Config.FPS)
-        LOGGER.info(Config.BITRATE)
         Config.CALL_STATUS=True
         return True
     except NoActiveGroupCall:
