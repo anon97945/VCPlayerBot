@@ -148,7 +148,7 @@ class Config:
           LOGGER.error("Invalid bitrate specified.")
           E_BITRATE=False
           BITRATE=48000
-       if not BITRATE >= 48000:
+       if BITRATE >= 48000:
           BITRATE=48000
     else:
        BITRATE=48000
